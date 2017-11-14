@@ -1,0 +1,25 @@
+{
+  "name": "folke",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elijahducote/Folke.git"
+  },
+  "description": "A multi-purposed Discord bot.",
+  "keywords": [
+    "discord bot",
+    "node",
+    "node js"
+  ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+  },
+  "dependencies": {
+    "discord.js": "^11.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.1"
+  }
+}
