@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const folke = new Discord.Client();
 // const prefix = "<@380117580242878484>";
 
-client.on("ready", () => {
-  setGame(`​**​**\down **${client.users.size} players** | **${client.guilds.size} server(s)** **​**​**`);
+folke.on("ready", () => {
+  folke.user.setGame(`​**​**\down **${client.users.size} players** | **${client.guilds.size} server(s)** **​**​**`);
 });
 
 
-client.login(process.env.APP_TOKEN); // Authorize login
+folke.login(process.env.APP_TOKEN); // Authorize login
