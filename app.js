@@ -1,4 +1,4 @@
-const Discord = include(`discord.js`);
+const Discord = require(`discord.js`);
 const client = new Discord.Client();
 // const prefix = `<@380117580242878484>`;
 
