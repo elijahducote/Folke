@@ -3,8 +3,7 @@ const client = new Discord.Client();
 // const prefix = "<@380117580242878484>";
 
 client.on("ready", () => {
-  var acc = ${client.users.size} - 2;
-  client.user.setGame(`﻿${acc} players | ${client.guilds.size} server(s)`);
+  client.user.setGame(`﻿${client.users.} players | ${client.guilds.size} server(s)`, "https://www.twitch.tv/theoraclegamer");
 });
 
 
