@@ -6,18 +6,16 @@ client.on('ready', () => {
   client.user.setGame(` ${client.users.size - 4}  players  |  ${client.guilds.size}  server (s)`);
 });
 
-client.on('message', post => {
-  if (post.content.startsWith(prefix)) {
-    if (post.author.bot || !post.content.startsWith(prefix)) return;
-    const args = post.content.slice(prefix.length).trim().split(/ +/g);
+client.on('message', msg => {
+  if (msg.content.startsWith(prefix)) {
+    if (msg.author.bot || !msg.content.startsWith(prefix)) return;
+    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
     const cmnd = args.shift().toLowerCase();
     if (cmnd === 'quack') {
-      post.channel.send('**Q u a c k  .**');
+      msg.channel.send('**Q u a c k  .**');
     }
-  }
-});
-
-client.on('message', msg => {
+  }  
+  
   if (msg.content.endsWith(prefix)) {
     if (msg.author.bot | !msg.content.endsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
