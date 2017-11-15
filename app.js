@@ -12,7 +12,7 @@ client.on('message', message => {
     const getter = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.pop().toLowerCase();
     if (command === 'quack') {
-      message.channel.send('**Q u a c k  .**);
+      message.channel.send('**Q u a c k  .**');
     }
   }
 });
@@ -23,7 +23,7 @@ client.on('message', message => {
     const getter = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
-      message.channel.send('**Q u a c k .**);
+      message.channel.send('**Q u a c k .**');
     }
   }
 });
