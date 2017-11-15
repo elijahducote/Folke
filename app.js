@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content.startsWith(prefix)) {
-    if (!msg.content.startsWith(prefix)) return;
+    if (msg.author.bot || !msg.content.startsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.pop().toLowerCase();
     if (command === 'quack') {
@@ -19,7 +19,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content.endsWith(prefix)) {
-    if (!msg.content.endsWith(prefix)) return;
+    if (msg.author.bot | !msg.content.endsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
