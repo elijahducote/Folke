@@ -10,7 +10,7 @@ client.on('message', post => {
   if (post.content.startsWith(prefix)) {
     if (post.author.bot || !post.content.startsWith(prefix)) return;
     const args = post.content.slice(prefix.length).trim().split(/ +/g);
-    const cmnd = args.pop().toLowerCase();
+    const cmnd = args.shift().toLowerCase();
     if (cmnd === 'quack') {
       post.channel.send('**Q u a c k  .**');
     }
