@@ -8,11 +8,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.content.endsWith(prefix)) {
-    if (msg.author.bot || msg.content.endsWith(prefix)) return;
+    if (msg.author.bot || !msg.content.endsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(' ');
     const command = getter.shift().toLowerCase();
     if (command === "quack") {
-      msg.channel.send('**Q  u  a  c  k  .**');
+      msg.channel.send('**Q  U A C K .**');
     }
   }
   
@@ -21,9 +21,9 @@ client.on('message', msg => {
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
-      msg.channel.send('**Q  u  a  c  k  .**');
+      msg.channel.send('**Q  U A C K .**');
     }
-  }  
+  }
 });
 
 
