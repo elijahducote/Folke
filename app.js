@@ -18,7 +18,7 @@ client.on('message', async message => {
 
 client.on('message', async msg => {
   if (msg.content.startsWith(prefix)) {
-    if (msg.author.bot || !msg.content.startsWith(prefix));
+    if (msg.author.bot || !msg.content.startsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
