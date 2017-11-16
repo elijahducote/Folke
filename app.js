@@ -16,7 +16,7 @@ client.on("message", message => {
       message.channel.send("Quack");
     }
   }
-  if (message.content === cmnd.concat(entity)) {
+  if (!message.content === entity.concat(command)) {
     if (command === "quack") {
         message.channel.send("Quack");
     }
