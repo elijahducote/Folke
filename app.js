@@ -7,23 +7,23 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
+    if (msg.content.endsWith(prefix)) {
+    if (msg.author.bot || msg.content.endsWith(prefix)) return;
+    const getter = msg.content.slice(prefix.length).trim().split(' ');
+    const command = getter.shift().toLowerCase();
+    if (command === "quack") {
+      msg.channel.send('**Q  u  a  c  k  .**');
+    }
+  }
+  
   if (msg.content.startsWith(prefix)) {
     if (msg.author.bot || !msg.content.startsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
-      msg.channel.send('**Quack.**');
+      msg.channel.send('**Q  u  a  c  k  .**');
     }
   }  
-  
-  if (msg.content.endsWith(prefix)) {
-    if (msg.author.bot || !msg.content.endsWith(prefix)) return;
-    const getter = msg.content.slice(prefix.length).trim().split(/\s/g);
-    const command = getter.shift().toLowerCase();
-    if (command === "quack") {
-      msg.channel.send('**Quack.**');
-    }
-  }
 });
 
 
