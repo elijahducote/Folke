@@ -10,7 +10,7 @@ client.on('message', msg => {
   if (msg.content.endsWith(prefix)) {
     const getter = msg.content.slice(prefix.length).trimLeft().split(' ');
     const cmmd = getter.shift().toLowerCase();
-    if (cmmd === 'quack') {
+    if (cmmd === 'quack quack') {
       msg.channel.send('Quack.');
     }
   }
