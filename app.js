@@ -6,15 +6,17 @@ client.on('ready', () => {
   client.user.setGame(` ${client.users.size - 4}  players  |  ${client.guilds.size}  server (s)`);
 });
 
-client.on('message', msg => {
-  if (msg.content.endsWith(prefix)) {
-    const getter = msg.content.slice(prefix.length).trim().split(' ');
+client.on('message', message => {
+  if (message.content.endsWith(prefix)) {
+    const getter = message.content.slice(prefix.length).trim().split(' ');
     const cmmd = getter.shift().toLowerCase();
     if (cmmd === 'quack') {
-      msg.channel.send('**Quack**');
+      message.channel.send('**Quack**');
     }
   }
-  
+});
+
+client.on('message', msg => {
   if (msg.content.startsWith(prefix)) {
     if (msg.author.bot || !msg.content.startsWith(prefix));
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
