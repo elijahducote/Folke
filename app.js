@@ -11,7 +11,7 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(' ');
     const cmmd = args.shift().toLowerCase();
     if (cmmd === 'quack') {
-      message.channel.send(' ');
+      message.channel.send('Quack');
     }
   }
 });
@@ -22,7 +22,7 @@ client.on('message', msg => {
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
-      msg.channel.send(' ');
+      msg.channel.send('Quack');
     }
   }
 });
