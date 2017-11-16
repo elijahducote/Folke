@@ -17,8 +17,8 @@ client.on('message', msg => {
   }  
   
   if (msg.content.endsWith(prefix)) {
-    if (!msg.content.endsWith(prefix) || msg.author.bot) return;
-    const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
+    if (msg.author.bot || !msg.content.endsWith(prefix)) return;
+    const getter = msg.content.slice(prefix.length).trim().split(/\s/g);
     const command = getter.shift().toLowerCase();
     if (command === "quack") {
       msg.channel.send('**Quack.**');
