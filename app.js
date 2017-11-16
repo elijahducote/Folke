@@ -10,7 +10,7 @@ client.on("message", message => {
   const args = message.content.slice(entity.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  if (message.content.startWith(entity)) {
+  if (message.content.startsWith(entity)) {
     if (command === "quack") {
       message.channel.send("Quack");
     }
