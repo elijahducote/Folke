@@ -9,14 +9,13 @@ client.on("ready", () => {
 client.on("message", message => {
   const args = message.content.slice(entity.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const cmnd = args.unshift().toLowerCase();
 
-  if (message.content === entity.concat(command)) {
+  if (message.content == entity.concat(command)) {
     if (command === "quack") {
       message.channel.send("Quack");
     }
   }
-  if (!message.content === entity.concat(command)) {
+  if (!message.content == entity.concat(command)) {
     if (command === "quack") {
         message.channel.send("Quack");
     }
