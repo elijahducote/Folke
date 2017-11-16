@@ -8,8 +8,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
   if (message.content.endsWith(prefix)) {
-    const getter = message.content.slice(prefix.length).trim().split(' ');
-    const cmmd = getter.shift().toLowerCase();
+    const args = message.content.slice(prefix.length).trim().split(' ');
+    const cmmd = args.shift().toLowerCase();
     if (cmmd === 'quack') {
       message.channel.send('**Quack**');
     }
