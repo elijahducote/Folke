@@ -6,23 +6,24 @@ client.on('ready', () => {
   client.user.setGame(` ${client.users.size - 4}  players  |  ${client.guilds.size}  server (s)`);
 });
 
-client.on('message', message => {
+client.on('message', async message => {
   if (message.content.endsWith(prefix)) {
-    const args = message.content.splice(prefix.length).split(' ');
+    const args = message.content.slice(prefix.length).split(' ');
     const cmmd = args.shift().toLowerCase();
+    message.content.edit
     if (cmmd === 'quack') {
-      message.channel.send('.');
+      message.channel.send(' ');
     }
   }
 });
 
-client.on('message', msg => {
+client.on('message', async msg => {
   if (msg.content.startsWith(prefix)) {
     if (msg.author.bot || !msg.content.startsWith(prefix));
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === 'quack') {
-      msg.channel.send('.');
+      msg.channel.send(' ');
     }
   }
 });
