@@ -9,15 +9,15 @@ client.on('ready', () => {
 client.on('message', msg => {
   if (msg.content.startsWith(prefix)) {
     if (msg.author.bot || !msg.content.startsWith(prefix)) return;
-    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-    const cmnd = args.shift().toLowerCase();
-    if (cmnd === 'quack') {
+    const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
+    const command = getter.shift().toLowerCase();
+    if (command === 'quack') {
       msg.channel.send('**Quack.**');
     }
   }  
   
   if (msg.content.endsWith(prefix)) {
-    if (msg.author.bot || !msg.content.endsWith(prefix)) return;
+    if (!msg.content.endsWith(prefix) || msg.author.bot) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
     const command = getter.shift().toLowerCase();
     if (command === "quack") {
