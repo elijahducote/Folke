@@ -14,14 +14,13 @@ client.on("message", message => {
   if (msg.startsWith(entity)) {
     if (command === "quack") {
       message.channel.send("Quack");
-    }  else {
-         if (msg.endsWith(entity)) {
-           if (command === "quack") {
-              message.channel.send("Quack");
-           }
-         }
     }
   }
+   if (msg.endsWith(entity)) {
+     if (command === "quack") {
+        message.channel.send("Quack");
+     }
+   }
 });
 
 
