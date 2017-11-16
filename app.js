@@ -1,14 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '<@380117580242878484>';
+const handle = "@Folke#2390";
 
 client.on('ready', () => {
   client.user.setGame(` ${client.users.size - 4}  players  |  ${client.guilds.size}  server (s)`);
 });
 
 client.on('message', message => {
-  if (message.content.endsWith(prefix)) {
-    const args = message.content.slice(prefix.length).trim().split(' ');
+  if (message.content.endsWith(handle)) {
+    const args = message.content.slice(handle.length).trim().split(' ');
     const cmmd = args.shift().toLowerCase();
     if (cmmd === 'quack') {
       message.channel.send('.');
