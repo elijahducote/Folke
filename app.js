@@ -8,9 +8,8 @@ client.on('ready', () => {
 
 client.on('message', async message => {
   if (message.content.endsWith(prefix)) {
-    const args = message.content.slice(prefix.length).split(' ');
+    const args = message.content.slice(prefix.length).trim().split(' ');
     const cmmd = args.shift().toLowerCase();
-    message.content.edit
     if (cmmd === 'quack') {
       message.channel.send(' ');
     }
