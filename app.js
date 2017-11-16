@@ -9,7 +9,7 @@ client.on("ready", () => {
 client.on("message", message => {
   const args = message.content.slice(entity.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const msg = message.content.toString();
+  const msg = args.toString();
 
   if (msg.startsWith(entity)) {
     if (command === "quack") {
