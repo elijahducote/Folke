@@ -6,7 +6,7 @@ client.on('ready', () => {
   client.user.setGame(` ${client.users.size - 4}  players  |  ${client.guilds.size}  server (s)`);
 });
 
-client.on('message', async message => {
+client.on('message', message => {
   if (message.content.endsWith(prefix)) {
     const args = message.content.slice(prefix.length).trim().split(' ');
     const cmmd = args.shift().toLowerCase();
@@ -16,7 +16,7 @@ client.on('message', async message => {
   }
 });
 
-client.on('message', async msg => {
+client.on('message', msg => {
   if (msg.content.startsWith(prefix)) {
     if (msg.author.bot || !msg.content.startsWith(prefix)) return;
     const getter = msg.content.slice(prefix.length).trim().split(/ +/g);
