@@ -6,7 +6,7 @@ client.on("ready", () => {
   client.user.setGame(` ${client.users.size - 4}  players  |  ${client.guilds.size}  server (s)`);
 });
 
-client.on("message", funcion(message) => {
+client.on("message", function(message) => {
   const args = message.content.slice(entity.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
