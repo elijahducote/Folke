@@ -16,7 +16,7 @@ client.on("message", message => {
       message.channel.send("Quack");
     }
   }
-  if (endsWith(msg.entity)) {
+  if (msg.endsWith(msg + entity)) {
     if (command === "quack") {
         message.channel.send("Quack");
     }
